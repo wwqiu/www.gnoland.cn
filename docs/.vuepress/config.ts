@@ -6,6 +6,7 @@ import {
 
 
 export default defineConfig({
+  dest: 'docs/.vuepress/gnoland.cn',
   theme: '@vuepress/theme-default',
   markdown: {
     lineNumbers: true
