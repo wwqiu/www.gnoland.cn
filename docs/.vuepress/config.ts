@@ -12,9 +12,12 @@ export default defineConfig({
     lineNumbers: true
   },
   title: 'GNO.LAND文档',
-    description: 'gnoland合约开发文档',
-    themeConfig: {
-        sidebar: Sidebar4ZH,
-        sidebarDepth: 1
-      }
+  description: 'gnoland合约开发文档',
+  themeConfig: {
+      sidebar: Sidebar4ZH,
+      sidebarDepth: 1,
+      nav: [
+        { text: 'GitHub', link: 'https://github.com/wwqiu/www.gnoland.cn' }
+      ]
+    }
 });
