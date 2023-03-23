@@ -15,6 +15,7 @@ export default defineConfig({
   description: 'gnoland合约开发文档',
   themeConfig: {
       sidebar: Sidebar4ZH,
+      smoothScroll: true,
       sidebarDepth: 1,
       nav: [
         { text: 'GitHub', link: 'https://github.com/wwqiu/www.gnoland.cn' }
