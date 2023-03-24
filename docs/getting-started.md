@@ -47,30 +47,8 @@ make
 # 执行以下命令检查是否构建成功
 ./build/gnokey
 
-# 执行以上命令将得到下面的输出
-# USAGE
-#   <subcommand> [flags] [<arg>...]
+# 执行以上命令将得到usage输出
 
-# Manages private keys for the node
-
-# SUBCOMMANDS
-#   add        Adds key to the keybase
-#   delete     Deletes a key from the keybase
-#   generate   Generates a bip39 mnemonic
-#   export     Exports private key armor
-#   import     Imports encrypted private key armor
-#   list       Lists all keys in the keybase
-#   sign       Signs the document
-#   verify     Verifies the document signature
-#   query      Makes an ABCI query
-#   broadcast  Broadcasts a signed document
-#   maketx     Composes a tx document to sign
-
-# FLAGS
-#   -home /home/ubuntu/.gno         home directory
-#   -insecure-password-stdin=false  WARNING! take password from stdin
-#   -quiet=false                    suppress output during execution
-#   -remote 127.0.0.1:26657         remote node URL
 ```
 ## 下一步
 恭喜!:tada::tada::tada:你已完成GnoLand的基本配置，下面开始你的智能合约之旅吧！！！
