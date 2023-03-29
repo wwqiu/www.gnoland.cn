@@ -16,6 +16,7 @@ export default defineConfig({
   themeConfig: {
       sidebar: Sidebar4ZH,
       smoothScroll: true,
+      displayAllHeaders: true,
       sidebarDepth: 1,
       nav: [
         { text: 'GitHub', link: 'https://github.com/wwqiu/www.gnoland.cn' }

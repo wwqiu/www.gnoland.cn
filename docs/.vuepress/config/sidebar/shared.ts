@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { SidebarConfigArray } from 'vuepress/config'
 
-export function getGuideSidebar (groupA, groupB): SidebarConfigArray {
+export function getGuideSidebar (groupA, groupB, groupC): SidebarConfigArray {
   const sidebar: SidebarConfigArray = [
     {
       title: groupA,
@@ -19,6 +19,15 @@ export function getGuideSidebar (groupA, groupB): SidebarConfigArray {
         'getting-started',
         'testnet-interaction',
         'first-gno-contract'
+      ]
+    },
+    {
+      title: groupC,
+      collapsable: false,
+      children: [
+        'docs/concepts',
+        'docs/package',
+        'docs/stdlib'
       ]
     }
   ]

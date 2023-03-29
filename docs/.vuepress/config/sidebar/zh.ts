@@ -4,6 +4,6 @@ import {
 } from './shared'
 
 export const Sidebar4ZH: SidebarConfig4Multiple = {
-  '/': getGuideSidebar('开始', '指南')
+  '/': getGuideSidebar('开始', '快速上手', '深入')
 }
 

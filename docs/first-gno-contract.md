@@ -133,16 +133,70 @@ func Render(path string) string {
     --remote test3.gno.land:36657 \
     ACCOUNT_NAME
 ```
-发布成功之后可以在[gnoscan](https://gnoscan.io/realms)上面查看你的Realm
+发布成功之后可以在[gnoscan](https://gnoscan.io/realms)上面查看你的Realm。
 
 ## Realm交互
 本节将演示如何和上面的`my_token`进行交互，其中gno代码中大写字母开头的函数为Public函数，可以通过call接口进行交互。
 ::: tip
 接口根据是否改变Realm内部状态分为两种：
-- 不改变Realm内部状态的接口可以通过query和maketx call交互，区别在于query不需要消耗gas；
-- 对于改变Realm内部状态的接口，必须通过maketx call进行交互。
+- 不改变Realm内部状态的接口可以通过query和maketx call交互，区别在于query不需要消耗gas
+- 对于改变Realm内部状态的接口，必须通过maketx call进行交互
 :::
 
 - Faucet
+```bash
+./build/gnokey maketx call \
+    --pkgpath "gno.land/r/my_token" \
+    --func "Faucet" \
+    --gas-fee "10ugnot" \
+    --gas-wanted "2000000" \
+    --broadcast \
+    --chainid "test3" \
+    --remote "test3.gno.land:36657" \
+    ACCOUNT_NAME
+```
+- BalanceOf
+
+`BalanceOf`不改变Realm的内部状态，所以通过maketx call和query都可以交互。
+```bash
+# maketx call
+./build/gnokey maketx call \
+    --pkgpath "gno.land/r/my_token" \
+    --func "BalanceOf" \
+	--args "QUERY_ADDR" \
+    --gas-fee "10ugnot" \
+    --gas-wanted "2000000" \
+    --broadcast \
+    --chainid "test3" \
+    --remote "test3.gno.land:36657" \
+    ACCOUNT_NAME
+
+# query
+./build/gnokey query --data "gno.land/r/my_token
+BalanceOf(\"QUERY_ADDR\")" --remote test3.gno.land:36657 "vm/qeval"
+```
+
+由于my_token的render接口也处理了balance请求，这里同样可以通过query vm/qrender来获取代币余额。
+```bash
+# 通过render查询
+./build/gnokey query "vm/qrender" --data "gno.land/r/my_token
+balance/QUERY_ADDR" --remote test3.gno.land:36657
+```
+这里的`QUERY_ADDR`为需要查询的地址。
 - Transfer
+
+```bash
+./build/gnokey maketx call \
+    --pkgpath "gno.land/r/my_token" \
+    --func "Transfer" \
+	--args "TO_ADDR" \
+	--args "1000000" \
+    --gas-fee "10ugnot" \
+    --gas-wanted "2000000" \
+    --broadcast \
+    --chainid "test3" \
+    --remote "test3.gno.land:36657" \
+    ACCOUNT_NAME
+```
 - TransferFrom
+`TransferFrom`是grc20的授权接口，需要配合`Approve`接口使用，代币持有地址(owner)调用`Approve`接口给spender授权，获取授权后spender调用`TransferFrom`接口转移owner地址的代币，这里不做演示，大家可以自行尝试。

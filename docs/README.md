@@ -10,7 +10,8 @@ Gnoland还提供了一种名为**Gnolang**的编程语言，它是一种类似�
 
 #### 相关链接
 - [官方主页 gno.land](https://gno.land/) 
-- [twitter](https://twitter.com/_gnoland) 
+- [GitHub](https://github.com/gnolang/gno)
+- [Twitter](https://twitter.com/_gnoland) 
 - [Telegram](https://t.me/gnoland) 
 - [Discord](https://discord.gg/3YbdqVP8Tb) 
 - [YouTube](https://www.youtube.com/@_gnoland) 
