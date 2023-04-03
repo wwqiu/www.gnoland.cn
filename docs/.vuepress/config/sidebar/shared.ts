@@ -16,10 +16,10 @@ export function getGuideSidebar (groupA, groupB, groupC): SidebarConfigArray {
       title: groupB,
       collapsable: false,
       children: [
-        'getting-started',
-        'testnet-interaction',
-        'first-gno-contract',
-        'local-node'  
+        'tutorial/getting-started',
+        'tutorial/testnet-interaction',
+        'tutorial/first-gno-contract',
+        'tutorial/local-node'  
 
       ]
     },
