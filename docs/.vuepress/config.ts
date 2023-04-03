@@ -11,12 +11,13 @@ export default defineConfig({
   markdown: {
     lineNumbers: true
   },
-  title: 'GNO.LAND文档',
+  title: 'GnoLand中文网',
   description: 'gnoland合约开发文档',
   themeConfig: {
+      //logo: '/logo.svg',
       sidebar: Sidebar4ZH,
       smoothScroll: true,
-      displayAllHeaders: true,
+      // displayAllHeaders: true,
       sidebarDepth: 1,
       nav: [
         { text: 'GitHub', link: 'https://github.com/wwqiu/www.gnoland.cn' }

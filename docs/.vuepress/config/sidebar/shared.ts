@@ -18,7 +18,9 @@ export function getGuideSidebar (groupA, groupB, groupC): SidebarConfigArray {
       children: [
         'getting-started',
         'testnet-interaction',
-        'first-gno-contract'
+        'first-gno-contract',
+        'local-node'  
+
       ]
     },
     {

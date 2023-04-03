@@ -8,7 +8,7 @@
 ```
 用生成的助记词创建你的账户
 ```bash
-./build/gnokey add KEYNAME --recover
+./build/gnokey add --recover KEYNAME
 ```
 注意：这里的`KEYNAME`是你账户的标识，请根据自己的喜好修改。  
 
