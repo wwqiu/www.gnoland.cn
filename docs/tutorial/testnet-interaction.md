@@ -4,17 +4,17 @@
 ## 创建账户
 进入gno工程目录，然后用gnokey生成助记词。
 ```bash
-./build/gnokey generate
+gnokey generate
 ```
 用生成的助记词创建你的账户
 ```bash
-./build/gnokey add --recover KEYNAME
+gnokey add --recover KEYNAME
 ```
 注意：这里的`KEYNAME`是你账户的标识，请根据自己的喜好修改。  
 
 确认你的账户是否添加成功
 ```bash
-./build/gnokey list
+gnokey list
 ```
 到这里，你的账户已经准备好了，下面可以开始测试网的交互。
 ## 获取测试代币
@@ -22,13 +22,13 @@
 
 - 获取账户信息
 ```bash
-./build/gnokey query --remote "test3.gno.land:36657" auth/accounts/ACCOUNT_ADDR
+gnokey query --remote "test3.gno.land:36657" auth/accounts/ACCOUNT_ADDR
 ```
-这里的`ACCOUNT_ADDR`为你的账户地址，可以通过`./build/gnokey list`查看。
+这里的`ACCOUNT_ADDR`为你的账户地址，可以通过`gnokey list`查看。
 
 - 发送代币
 ```bash
-./build/gnokey maketx send \
+gnokey maketx send \
     --send "10000000ugnot" \
     --to "DEST_ADDR" \
     --gas-fee "1ugnot" \
@@ -49,7 +49,7 @@
 
 - Register
 ```bash
-./build/gnokey maketx call \
+gnokey maketx call \
     --pkgpath "gno.land/r/demo/users" \
     --func "Register" \
     --args "" \
@@ -71,7 +71,7 @@
 
 - CreateBoard
 ```bash
-./build/gnokey maketx call \
+gnokey maketx call \
     --pkgpath "gno.land/r/demo/boards" \
     --func "CreateBoard" \
     --args "BOARD_NAME" \

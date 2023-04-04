@@ -1,3 +1,13 @@
 # 基本概念
 
-*work in progress*
+## 区块
+
+## 交易
+
+## Realm
+
+## Package
+
+## GnoVM
+
+## Gnode

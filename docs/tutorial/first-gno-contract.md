@@ -122,7 +122,7 @@ func Render(path string) string {
 ## 发布Realm到测试网
 - 调用addpkg将你的合约发布到测试网
 ```bash
-./build/gnokey maketx addpkg \
+gnokey maketx addpkg \
     --pkgpath "gno.land/r/my_token" \
     --pkgdir "examples/gno.land/r/demo/my_token" \
     --deposit 100000000ugnot \
@@ -145,7 +145,7 @@ func Render(path string) string {
 
 - Faucet
 ```bash
-./build/gnokey maketx call \
+gnokey maketx call \
     --pkgpath "gno.land/r/my_token" \
     --func "Faucet" \
     --gas-fee "10ugnot" \
@@ -160,7 +160,7 @@ func Render(path string) string {
 `BalanceOf`不改变Realm的内部状态，所以通过maketx call和query都可以交互。
 ```bash
 # maketx call
-./build/gnokey maketx call \
+gnokey maketx call \
     --pkgpath "gno.land/r/my_token" \
     --func "BalanceOf" \
 	--args "QUERY_ADDR" \
@@ -172,21 +172,21 @@ func Render(path string) string {
     ACCOUNT_NAME
 
 # query
-./build/gnokey query --data "gno.land/r/my_token
+gnokey query --data "gno.land/r/my_token
 BalanceOf(\"QUERY_ADDR\")" --remote test3.gno.land:36657 "vm/qeval"
 ```
 
 由于my_token的render接口也处理了balance请求，这里同样可以通过query vm/qrender来获取代币余额。
 ```bash
 # 通过render查询
-./build/gnokey query "vm/qrender" --data "gno.land/r/my_token
+gnokey query "vm/qrender" --data "gno.land/r/my_token
 balance/QUERY_ADDR" --remote test3.gno.land:36657
 ```
 这里的`QUERY_ADDR`为需要查询的地址。
 - Transfer
 
 ```bash
-./build/gnokey maketx call \
+gnokey maketx call \
     --pkgpath "gno.land/r/my_token" \
     --func "Transfer" \
 	--args "TO_ADDR" \

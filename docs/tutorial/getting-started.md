@@ -39,13 +39,13 @@ cd ~/workspace
 git clone https://github.com/gnolang/gno
 
 # 编译gno工程
-cd gno
+cd gno/gno.land
 
-make
+make install
 
 # 完成编译后的文件将会安装在~/workspace/gno/build目录下
 # 执行以下命令检查是否构建成功
-./build/gnokey
+gnokey
 
 # 执行以上命令将得到usage输出
 
