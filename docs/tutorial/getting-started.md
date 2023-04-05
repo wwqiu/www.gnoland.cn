@@ -43,7 +43,6 @@ cd gno/gno.land
 
 make install
 
-# 完成编译后的文件将会安装在~/workspace/gno/build目录下
 # 执行以下命令检查是否构建成功
 gnokey
 

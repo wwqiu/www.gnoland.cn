@@ -28,6 +28,7 @@ export function getGuideSidebar (groupA, groupB, groupC): SidebarConfigArray {
       collapsable: false,
       children: [
         'docs/concepts',
+        'docs/client',
         'docs/package',
         'docs/stdlib'
       ]
