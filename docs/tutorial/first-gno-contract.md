@@ -199,4 +199,5 @@ gnokey maketx call \
     ACCOUNT_NAME
 ```
 - TransferFrom
+
 `TransferFrom`是grc20的授权接口，需要配合`Approve`接口使用，代币持有地址(owner)调用`Approve`接口给spender授权，获取授权后spender调用`TransferFrom`接口转移owner地址的代币，这里不做演示，大家可以自行尝试。

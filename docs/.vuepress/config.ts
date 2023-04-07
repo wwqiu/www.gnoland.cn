@@ -6,7 +6,7 @@ import {
 
 
 export default defineConfig({
-  dest: 'docs/.vuepress/gnoland.cn',
+  dest: './public',
   theme: '@vuepress/theme-default',
   markdown: {
     lineNumbers: true
@@ -14,7 +14,7 @@ export default defineConfig({
   title: 'GnoLand中文网',
   description: 'gnoland合约开发文档',
   themeConfig: {
-      //logo: '/logo.svg',
+      logo: '/logo.svg',
       sidebar: Sidebar4ZH,
       smoothScroll: true,
       // displayAllHeaders: true,
