@@ -20,7 +20,23 @@ export default defineConfig({
       // displayAllHeaders: true,
       sidebarDepth: 1,
       nav: [
+        { text: '新闻', link: '/news/'},
+        { text: '指南', link: '/'},
         { text: 'GitHub', link: 'https://github.com/wwqiu/www.gnoland.cn' }
       ]
-    }
+    },
+    
+    plugins:[
+      [
+        'vuepress-plugin-container',
+        {
+          type: 'right',
+          defaultTitle: '',
+        },
+      ],
+      ['vuepress-plugin-container', {
+        type: 'news',
+        defaultTitle: '',
+      }]
+    ]
 });

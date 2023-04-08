@@ -1,5 +1,7 @@
 # GnoLand简介
 
+![gnoland](/gnoland.png)
+
 Gnoland是一个由Cosmos和Tendermint的联合创始人**Jae Kwon**于2020年发起的区块链L1项目，它旨在打造一个去**中心化、安全和可扩展**的智能合约平台，让人们可以创建重要的应用，尤其是抵抗审查。[[1]](https://zhuanlan.zhihu.com/p/559487501) 
 
 Gnoland基于Tendermint的一个分支**New Tendermint**开发，而原来的Tendermint现在改名为Ignite。New Tendermint致力于简化Tendermint框架，并使用Gno作为新Cosmos项目的工具箱。 
