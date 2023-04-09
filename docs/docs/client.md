@@ -19,15 +19,34 @@ Name        |Description
 `broadcast` | 广播消息
 `maketx`    | 生成要签名的交易文本
 
-### add
-### delete
-### generate
-### export
-### import
-### list
-### sign
-### verify
-### query
-### broadcast
-### maketx
+每个子命令usage可以输入`gnokey $SUB_CMD --help`进行查看。
 
+## gnoland
+
+`gnoland`用来启动一个Gno节点。
+
+### 选项
+Name                    | Description           | default
+---                     | ---                   | ---
+chainid                 | 链id                  | dev
+genesis-balances-file   | gnot初始分配文件       | gno.land/genesis/genesis_balances.txt
+genesis-remote          | 监听端口              | localhost:26657
+genesis-txs-file        | 初始交易文件           | gno.land/genesis/genesis_txs.txt
+root-dir                | 配置和数据存储目录     | testdir
+skip-failing-genesis-txs| 忽略失败的初始交易     | false
+skip-start              | 初始化后退出，不启动节点  | false
+
+## gnodev
+
+`gnodev`是用于开发的测试工具，你可以使用`gnodev`在不启动区块链的情况下使用`GnoVM`在本地环境构建和测试Realm。
+
+### 子命令
+
+Name            |Description
+---             |---
+`build`         | 构建一个gno package
+`test`          | 执行gno package的单元测试
+`precompile`    | 预编译.gno文件为.go文件
+`repl`          | 启动gno repl
+
+每个子命令usage可以输入`gnodev $SUB_CMD --help`进行查看。
