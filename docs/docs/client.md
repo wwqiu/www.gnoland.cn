@@ -29,9 +29,9 @@ Name        |Description
 Name                    | Description           | default
 ---                     | ---                   | ---
 chainid                 | 链id                  | dev
-genesis-balances-file   | gnot初始分配文件       | gno.land/genesis/genesis_balances.txt
+genesis-balances-file   | 创世区块gnot初始分配文件       | gno.land/genesis/genesis_balances.txt
 genesis-remote          | 监听端口              | localhost:26657
-genesis-txs-file        | 初始交易文件           | gno.land/genesis/genesis_txs.txt
+genesis-txs-file        | 创世区块交易文件       | gno.land/genesis/genesis_txs.txt
 root-dir                | 配置和数据存储目录     | testdir
 skip-failing-genesis-txs| 忽略失败的初始交易     | false
 skip-start              | 初始化后退出，不启动节点  | false
