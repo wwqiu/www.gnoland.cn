@@ -22,7 +22,7 @@ export default defineConfig({
       nav: [
         { text: '新闻', link: '/news/'},
         { text: '指南', link: '/'},
-        { text: 'GitHub', link: 'https://github.com/wwqiu/www.gnoland.cn' }
+        { text: 'GitHub', link: 'https://github.com/gnolang/gno' }
       ]
     },
     
