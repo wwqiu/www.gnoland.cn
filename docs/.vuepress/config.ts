@@ -7,7 +7,7 @@ import {
 
 export default defineConfig({
   dest: './public',
-  theme: '@vuepress/theme-default',
+  //theme: '@vuepress/theme-default',
   markdown: {
     lineNumbers: true
   },
